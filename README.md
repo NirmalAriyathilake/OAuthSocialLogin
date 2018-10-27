@@ -7,7 +7,8 @@ Steps:
 2. Open terminal in the directory and run :
 
 ```
-composer install
+   composer install
 ```
 
 3. Open index.php using a browser
+
