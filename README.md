@@ -12,3 +12,4 @@ Steps:
 
 3. Open index.php using a browser
 
+For more details : [OAuth And Social Login](https://medium.com/@nirmalcode/oauth-social-login-106864e886de)
