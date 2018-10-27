@@ -1,4 +1,2 @@
-vendor
 .vscode
 secret
-composer.lock

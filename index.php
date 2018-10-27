@@ -7,8 +7,6 @@
 <title>Google Drive Uploader</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-
 <meta name="google-signin-client_id" content="57064433868-ebkvuv5druld2jah3h8hmt5l71ennfqb.apps.googleusercontent.com">
 
 <script>
@@ -26,6 +24,14 @@ function onSignIn(googleUser) {
   document.getElementById('label_name').innerHTML = profile.getName();
   document.getElementById('label_email').innerHTML = profile.getEmail();
   document.getElementById("imageid").src=profile.getImageUrl();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://localhost/OAuthSocialLogin/server.php');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    console.log('Signed in as: ' + xhr.responseText);
+  };
+  xhr.send('idtoken=' + id_token);
 
 }
 
@@ -65,12 +71,9 @@ function onSignIn(googleUser) {
             Email:<br/>
             <label id="label_email" class="form-control"></label><br/>
 
-            <input type="button" value="Drive Uploader" onclick="window.location.href='drive.php'" class="btn btn-success"/>
+            <input type="button" value="Log Out!" onclick="window.location.href='logout.php'" class="btn btn-danger"/>
         </div>
     </div>
 </div>
-
-
-
 
 </body>
