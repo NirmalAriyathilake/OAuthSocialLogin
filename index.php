@@ -7,6 +7,8 @@
 <title>Google Drive Uploader</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+
 <meta name="google-signin-client_id" content="57064433868-ebkvuv5druld2jah3h8hmt5l71ennfqb.apps.googleusercontent.com">
 
 <script>
